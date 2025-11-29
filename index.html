@@ -315,6 +315,34 @@
         </div>
       </div>
 
+      <!-- Category Filter (only for hot dishes) -->
+      <div id="category-filter" class="mb-8 flex flex-wrap justify-center gap-3 animate-fadeIn">
+        <button onclick="filterByCategory('all')" id="cat-all"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-red-600 text-white shadow-md hover:shadow-lg">
+          全部
+        </button>
+        <button onclick="filterByCategory('小菜')" id="cat-小菜"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          小菜
+        </button>
+        <button onclick="filterByCategory('青菜')" id="cat-青菜"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          青菜
+        </button>
+        <button onclick="filterByCategory('雞肉')" id="cat-雞肉"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          雞肉
+        </button>
+        <button onclick="filterByCategory('豬肉')" id="cat-豬肉"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          豬肉
+        </button>
+        <button onclick="filterByCategory('海鮮')" id="cat-海鮮"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          海鮮
+        </button>
+      </div>
+
       <!-- Menu Grid -->
       <div id="menu-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 animate-fadeIn">
         <!-- Items will be injected by JS -->
@@ -524,12 +552,29 @@
       set_meals: setMeals
     };
 
+    let currentMenuType = 'hot_dishes';
+    let currentCategory = 'all';
+
     // Render Menu
-    function renderMenu(category) {
+    function renderMenu(category, filterCategory = 'all') {
       const grid = document.getElementById('menu-grid');
+      const categoryFilter = document.getElementById('category-filter');
       grid.innerHTML = '';
 
-      menuItems[category].forEach(item => {
+      // Show/hide category filter
+      if (category === 'hot_dishes') {
+        categoryFilter.classList.remove('hidden');
+      } else {
+        categoryFilter.classList.add('hidden');
+      }
+
+      // Filter items
+      let items = menuItems[category];
+      if (category === 'hot_dishes' && filterCategory !== 'all') {
+        items = items.filter(item => item.category === filterCategory);
+      }
+
+      items.forEach(item => {
         const spicyHtml = item.spicyLevel > 0
           ? Array(item.spicyLevel).fill('<span class="text-red-500 text-sm" title="辣度">🌶️</span>').join('')
           : '<span class="text-gray-400 text-xs bg-gray-100 px-2 py-1 rounded">不辣</span>';
@@ -568,7 +613,9 @@
 
     // Switch Menu Tabs
     function switchMenu(category) {
-      renderMenu(category);
+      currentMenuType = category;
+      currentCategory = 'all';
+      renderMenu(category, 'all');
 
       const btnHot = document.getElementById('btn-hot_dishes');
       const btnSet = document.getElementById('btn-set_meals');
@@ -576,14 +623,38 @@
       if (category === 'hot_dishes') {
         btnHot.className = "px-8 py-3 rounded-full font-bold text-base transition-all duration-300 bg-red-600 text-white shadow-lg";
         btnSet.className = "px-8 py-3 rounded-full font-bold text-base transition-all duration-300 text-gray-500 hover:bg-gray-50";
+        // Reset category filter
+        updateCategoryButtons('all');
       } else {
         btnHot.className = "px-8 py-3 rounded-full font-bold text-base transition-all duration-300 text-gray-500 hover:bg-gray-50";
         btnSet.className = "px-8 py-3 rounded-full font-bold text-base transition-all duration-300 bg-red-600 text-white shadow-lg";
       }
     }
 
+    // Filter by category
+    function filterByCategory(category) {
+      currentCategory = category;
+      renderMenu(currentMenuType, category);
+      updateCategoryButtons(category);
+    }
+
+    // Update category button styles
+    function updateCategoryButtons(activeCategory) {
+      const categories = ['all', '小菜', '青菜', '雞肉', '豬肉', '海鮮'];
+      categories.forEach(cat => {
+        const btn = document.getElementById(`cat-${cat}`);
+        if (btn) {
+          if (cat === activeCategory) {
+            btn.className = "px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-red-600 text-white shadow-md hover:shadow-lg";
+          } else {
+            btn.className = "px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600";
+          }
+        }
+      });
+    }
+
     // Initial Render
-    renderMenu('hot_dishes');
+    renderMenu('hot_dishes', 'all');
 
   </script>
 </body>
