@@ -1,0 +1,25 @@
+name: Deploy HTML to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 監聽 main 分支的更動
+
+permissions:
+  contents: write # ⚠️ 給予寫入權限，讓 Action 能推送部署分支
+
+jobs:
+  deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      # --- 純 HTML 不需要 Build 步驟，直接部署 ---
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # ⚠️ 這裡填 "." 代表部署整個根目錄
+          branch: gh-pages # 部署到 gh-pages 分支
