@@ -167,8 +167,8 @@
     <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-red-900/90 z-10"></div>
     <div class="absolute inset-0 z-0">
       <img
-        src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-        alt="Chinese Fusion Food" class="w-full h-full object-cover transform scale-105 animate-slow-zoom" />
+        src="data/picture/head.png"
+        alt="口味創意料理美食" class="w-full h-full object-cover transform scale-105 animate-slow-zoom" />
     </div>
 
     <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-12">
@@ -227,7 +227,7 @@
               白飯吃到飽
               <span class="ml-3 text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full font-bold">合菜限定</span>
             </h3>
-            <p class="text-gray-600 leading-relaxed">內用點選「兩道以上合菜」，即可享白飯無限續加！適合三五好友一起狂添飯。</p>
+            <p class="text-gray-600 leading-relaxed">內用點選「兩道以上合菜」，即可享白飯無限續加！點個人套餐享兩碗白飯。適合三五好友一起狂添飯。</p>
           </div>
         </div>
 
@@ -277,12 +277,13 @@
           <div class="relative z-10">
             <div
               class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors shadow-sm">
-              <i data-lucide="star" class="h-8 w-8"></i>
+              <i data-lucide="bike" class="h-8 w-8"></i>
             </div>
             <h3 class="text-2xl font-bold text-gray-800 mb-3 flex items-center">
-              創意融合
+              機車停車方便
+              <span class="ml-3 text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full font-bold">免費</span>
             </h3>
-            <p class="text-gray-600 leading-relaxed">口味偏重、超級下飯！結合四大菜系精華，每一口都是驚喜。</p>
+            <p class="text-gray-600 leading-relaxed">用餐客人可以停社區露天機車位，騎車來也超方便！不用再為停車煩惱。</p>
           </div>
         </div>
       </div>
@@ -532,8 +533,6 @@
           ? Array(item.spicyLevel).fill('<span class="text-red-500 text-sm" title="辣度">🌶️</span>').join('')
           : '<span class="text-gray-400 text-xs bg-gray-100 px-2 py-1 rounded">不辣</span>';
 
-        const starsHtml = Array(5).fill('<i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>').join('');
-
         const html = `
                     <div class="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-gray-100">
                         <div class="aspect-w-16 aspect-h-10 h-60 overflow-hidden relative">
@@ -557,14 +556,7 @@
                                 <span class="text-red-700 font-bold text-xl">$${item.price}</span>
                             </div>
 
-                            <p class="text-gray-600 text-sm mb-6 leading-relaxed line-clamp-3 flex-grow">${item.desc}</p>
-                            
-                            <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
-                                <div class="flex items-center text-yellow-500 text-xs space-x-0.5">
-                                    ${starsHtml}
-                                </div>
-                                <span class="text-xs text-gray-400 font-medium">網友熱推</span>
-                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">${item.desc}</p>
                         </div>
                     </div>
                 `;
