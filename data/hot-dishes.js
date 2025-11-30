@@ -12,7 +12,7 @@ const hotDishes = [
   },
   {
     "name": "冰梅苦瓜",
-    "price": "待定",
+    "price": "80",
     "desc": "嚴選新鮮青苦瓜，片薄後冰鎮以保留爽脆口感。佐以冰梅醬醃漬入味，酸甜的滋味巧妙中和了苦味，入口回甘清爽。",
     "image": "data/picture/PlumSauceBitterMelon.jpg",
     "tag": "清脆回甘",
