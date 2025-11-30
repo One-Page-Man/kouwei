@@ -29,13 +29,21 @@ const hotDishes = [
     "spicyLevel": 2
   },
   // === 青菜類 ====
-  
+  {
+    "name": "酸筍空心菜",
+    "price": "130",
+    "desc": "鮮嫩空心菜搭配爽脆酸筍絲大火快炒，酸筍獨特的發酵酸香與蒜末完美融合，口感清脆多汁，酸香開胃，不僅解膩更是下飯良伴。",
+    "image": "data/picture/WaterSpinachWithSourBamboo.jpg",
+    "tag": "酸香開胃",
+    "category": "青菜",
+    "spicyLevel": 1
+  },
 
   // === 雞肉類 ===
   {
     "name": "流口水雞",
     "price": "180",
-    "desc": "皮脆肉嫩的白斬雞，淋上特製紅油醬汁，搭配爽脆黃瓜絲與花生碎，集麻、辣、鮮、香於一身，讓人食指大動。",
+    "desc": "嚴選帶骨雞腿手工去骨，保留皮脆肉嫩的絕佳口感，淋上特製紅油醬汁，搭配爽脆黃瓜絲與花生碎，集麻、辣、鮮、香於一身，讓人食指大動。",
     "image": "data/picture/MouthWateringChicken.jpg",
     "tag": "麻辣鮮香",
     "category": "雞肉",
@@ -44,7 +52,7 @@ const hotDishes = [
   {
     "name": "口味油雞",
     "price": "170",
-    "desc": "鮮嫩多汁的油雞，鋪上滿滿特製蔥油醬，蔥香濃郁撲鼻，鹹香滋味完全滲透進雞肉中，清爽不油膩。",
+    "desc": "堅持採用帶骨雞腿手工去骨，肉質鮮嫩多汁，鋪上滿滿特製蔥油醬，蔥香濃郁撲鼻，鹹香滋味完全滲透進雞肉中，清爽不油膩。",
     "image": "data/picture/ScallionOilChicken.jpg",
     "tag": "蔥香濃郁",
     "category": "雞肉",
@@ -65,6 +73,15 @@ const hotDishes = [
     "desc": "鮮嫩雞丁裹上濃郁的梅子醬汁，酸甜適中，色澤油亮誘人，入口帶有淡淡梅香，口感軟嫩不乾柴。",
     "image": "data/picture/PlumSauceChicken.jpg",
     "tag": "酸甜下飯",
+    "category": "雞肉",
+    "spicyLevel": 0
+  },
+  {
+    "name": "麻油雞湯",
+    "price": "280",
+    "desc": "嚴選麻油與老薑爆香，搭配鮮嫩雞肉燉煮，湯頭溫潤濃郁，帶有迷人酒香與麻油香氣，是暖心又暖胃的滋補聖品。",
+    "image": "data/picture/SesameOilChickenSoup.jpg",
+    "tag": "暖胃補身",
     "category": "雞肉",
     "spicyLevel": 0
   },
