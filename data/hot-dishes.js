@@ -29,7 +29,15 @@ const hotDishes = [
     "spicyLevel": 2
   },
   // === 青菜類 ====
-  
+  {
+    "name": "酸筍空心菜",
+    "price": "130",
+    "desc": "鮮嫩空心菜搭配爽脆酸筍絲大火快炒，酸筍獨特的發酵酸香與蒜末完美融合，口感清脆多汁，酸香開胃，不僅解膩更是下飯良伴。",
+    "image": "data/picture/WaterSpinachWithSourBamboo.jpg",
+    "tag": "酸香開胃",
+    "category": "青菜",
+    "spicyLevel": 1
+  },
 
   // === 雞肉類 ===
   {
