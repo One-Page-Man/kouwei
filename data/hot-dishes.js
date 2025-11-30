@@ -32,7 +32,7 @@ const hotDishes = [
   {
     "name": "酸筍空心菜",
     "price": "130",
-    "desc": "鮮嫩空心菜搭配爽脆酸筍絲大火快炒，酸筍獨特的發酵酸香與蒜末完美融合，口感清脆多汁，酸香開胃，不僅解膩更是下飯良伴。",
+    "desc": "選用道地客家酸筍與鮮嫩空心菜大火快炒，酸筍獨特的發酵酸香與濃郁蒜末完美融合，口感清脆爽口，酸香開胃，解膩又下飯。",
     "image": "data/picture/WaterSpinachWithSourBamboo.jpg",
     "tag": "酸香開胃",
     "category": "青菜",
@@ -70,7 +70,7 @@ const hotDishes = [
   {
     "name": "梅子雞丁",
     "price": "160",
-    "desc": "鮮嫩雞丁裹上濃郁的梅子醬汁，酸甜適中，色澤油亮誘人，入口帶有淡淡梅香，口感軟嫩不乾柴。",
+    "desc": "嚴選鮮嫩去骨雞腿肉，裹上濃郁的梅子醬汁翻炒。酸甜滋味適中，色澤油亮誘人，入口帶有淡淡梅香，口感軟嫩多汁。",
     "image": "data/picture/PlumSauceChicken.jpg",
     "tag": "酸甜下飯",
     "category": "雞肉",
@@ -79,7 +79,7 @@ const hotDishes = [
   {
     "name": "麻油雞湯",
     "price": "280",
-    "desc": "嚴選麻油與老薑爆香，搭配鮮嫩雞肉燉煮，湯頭溫潤濃郁，帶有迷人酒香與麻油香氣，是暖心又暖胃的滋補聖品。",
+    "desc": "嚴選麻油與老薑爆香，搭配鮮嫩雞腿肉燉煮。湯頭帶有濃厚迷人的酒香與麻油香氣，肉質彈牙，入口暖胃更暖心，是滋補聖品。",
     "image": "data/picture/SesameOilChickenSoup.jpg",
     "tag": "暖胃補身",
     "category": "雞肉",
@@ -101,7 +101,7 @@ const hotDishes = [
   {
     "name": "金沙中卷",
     "price": "190",
-    "desc": "新鮮中卷裹粉酥炸後，快速拌炒鹹蛋黃金沙醬與四季豆，中卷Q彈有嚼勁，外層鹹香濃郁，下酒菜首選。",
+    "desc": "新鮮中卷酥炸後，拌入炒至發泡呈現泡沫狀的鹹蛋黃（金沙）。金沙均勻包裹沾附在食材表面，口感Q彈鹹香，且能長時間保持酥脆不洩油。",
     "image": "data/picture/SaltedEggSquid.jpg",
     "tag": "Q彈鹹香",
     "category": "海鮮",
@@ -128,7 +128,7 @@ const hotDishes = [
   {
     "name": "麻辣烤魚",
     "price": "450",
-    "desc": "整尾烤魚浸泡在紅通通的麻辣湯底中，鋪滿乾辣椒與花椒，魚肉鮮嫩細緻，湯頭香辣過癮，嗜辣者必點。",
+    "desc": "源自四川重慶的傳統名吃，選用肉質細緻的金目鱸魚，佐以自製麻辣醬。雖紅通通一片，但風味溫和順暢，魚肉鮮嫩入味，香辣過癮。",
     "image": "data/picture/SpicyGrilledFish.jpg",
     "tag": "香辣過癮",
     "category": "海鮮",
