@@ -109,10 +109,10 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <button onclick="scrollToSection('features')"
-            class="text-white/90 hover:text-yellow-400 font-medium transition-colors text-base tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-yellow-400 after:transition-all hover:after:w-full">特色</button>
           <button onclick="scrollToSection('menu')"
             class="text-white/90 hover:text-yellow-400 font-medium transition-colors text-base tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-yellow-400 after:transition-all hover:after:w-full">熱門菜單</button>
+          <button onclick="scrollToSection('features')"
+            class="text-white/90 hover:text-yellow-400 font-medium transition-colors text-base tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-yellow-400 after:transition-all hover:after:w-full">特色</button>
           <button onclick="scrollToSection('about')"
             class="text-white/90 hover:text-yellow-400 font-medium transition-colors text-base tracking-wide relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-yellow-400 after:transition-all hover:after:w-full">環境</button>
           <button onclick="scrollToSection('contact')"
@@ -143,19 +143,21 @@
     <div id="mobile-menu"
       class="hidden md:hidden bg-red-950 absolute w-full shadow-xl border-t border-red-800 animate-fadeIn">
       <div class="px-4 pt-2 pb-6 space-y-2">
-        <button onclick="scrollToSection('features')"
-          class="block w-full text-left py-4 text-white text-lg font-medium border-b border-red-800/50 active:text-yellow-400">特色</button>
         <button onclick="scrollToSection('menu')"
           class="block w-full text-left py-4 text-white text-lg font-medium border-b border-red-800/50 active:text-yellow-400">熱門菜單</button>
+        <button onclick="scrollToSection('features')"
+          class="block w-full text-left py-4 text-white text-lg font-medium border-b border-red-800/50 active:text-yellow-400">特色</button>
         <button onclick="scrollToSection('about')"
           class="block w-full text-left py-4 text-white text-lg font-medium border-b border-red-800/50 active:text-yellow-400">環境</button>
         <button onclick="scrollToSection('contact')"
           class="block w-full text-left py-4 text-white text-lg font-medium border-b border-red-800/50 active:text-yellow-400">資訊</button>
 
         <div class="flex justify-center space-x-8 pt-6">
-          <a href="https://www.instagram.com/kouwei_restaurant" class="text-white hover:text-pink-400 bg-white/10 p-3 rounded-full"><i data-lucide="instagram"
+          <a href="https://www.instagram.com/kouwei_restaurant"
+            class="text-white hover:text-pink-400 bg-white/10 p-3 rounded-full"><i data-lucide="instagram"
               class="h-6 w-6"></i></a>
-          <a href="https://www.facebook.com/profile.php/?id=100088958104080" class="text-white hover:text-blue-400 bg-white/10 p-3 rounded-full"><i data-lucide="facebook"
+          <a href="https://www.facebook.com/profile.php/?id=100088958104080"
+            class="text-white hover:text-blue-400 bg-white/10 p-3 rounded-full"><i data-lucide="facebook"
               class="h-6 w-6"></i></a>
         </div>
       </div>
@@ -166,9 +168,8 @@
   <div class="relative h-[90vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-red-900/90 z-10"></div>
     <div class="absolute inset-0 z-0">
-      <img
-        src="data/picture/head.png"
-        alt="口味創意料理美食" class="w-full h-full object-cover transform scale-105 animate-slow-zoom" />
+      <img src="data/picture/head.png" alt="口味創意料理美食"
+        class="w-full h-full object-cover transform scale-105 animate-slow-zoom" />
     </div>
 
     <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-12">
@@ -197,6 +198,104 @@
       </div>
     </div>
   </div>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-24 px-4 bg-stone-100 border-t border-stone-200">
+    <div class="max-w-7xl mx-auto">
+      <!-- Full Menu Image -->
+      <div class="mb-16">
+        <div class="text-center mb-8">
+          <h3 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center">
+            <i data-lucide="file-text" class="mr-3 h-8 w-8 text-red-600"></i>
+            完整菜單
+          </h3>
+          <p class="text-gray-600">點擊圖片可放大查看</p>
+        </div>
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+          <a href="data/picture/menu.jpg" target="_blank" rel="noreferrer" class="block group">
+            <div class="relative overflow-hidden">
+              <img src="data/picture/menu.jpg" alt="口味創意料理完整菜單"
+                class="w-full h-auto group-hover:scale-105 transition-transform duration-500" />
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                <div
+                  class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 px-6 py-3 rounded-full">
+                  <span class="text-gray-900 font-bold flex items-center">
+                    <i data-lucide="zoom-in" class="mr-2 h-5 w-5"></i>
+                    點擊放大
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+        <div class="max-w-xl">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">美味菜單</h2>
+          <p class="text-gray-600 text-lg">
+            <span class="text-red-600 font-medium">熱炒合菜</span> 與 <span class="text-red-600 font-medium">個人定食</span>
+            隨心選擇。
+          </p>
+        </div>
+
+        <div class="flex bg-white p-1.5 rounded-full shadow-md mt-6 md:mt-0">
+          <button onclick="switchMenu('hot_dishes')" id="btn-hot_dishes"
+            class="px-8 py-3 rounded-full font-bold text-base transition-all duration-300 bg-red-600 text-white shadow-lg">
+            熱門熱炒
+          </button>
+          <button onclick="switchMenu('set_meals')" id="btn-set_meals"
+            class="px-8 py-3 rounded-full font-bold text-base transition-all duration-300 text-gray-500 hover:bg-gray-50">
+            個人套餐
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Filter (only for hot dishes) -->
+      <div id="category-filter" class="mb-8 flex flex-wrap justify-center gap-3 animate-fadeIn">
+        <button onclick="filterByCategory('all')" id="cat-all"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-red-600 text-white shadow-md hover:shadow-lg">
+          全部
+        </button>
+        <button onclick="filterByCategory('小菜')" id="cat-小菜"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          小菜
+        </button>
+        <button onclick="filterByCategory('青菜')" id="cat-青菜"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          青菜
+        </button>
+        <button onclick="filterByCategory('雞肉')" id="cat-雞肉"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          雞肉
+        </button>
+        <button onclick="filterByCategory('豬肉')" id="cat-豬肉"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          豬肉
+        </button>
+        <button onclick="filterByCategory('海鮮')" id="cat-海鮮"
+          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
+          海鮮
+        </button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div id="menu-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 animate-fadeIn">
+        <!-- Items will be injected by JS -->
+      </div>
+
+      <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mt-16 flex items-start shadow-sm">
+        <i data-lucide="info" class="text-yellow-600 w-6 h-6 mt-0.5 mr-4 flex-shrink-0"></i>
+        <p class="text-base text-yellow-800 leading-relaxed">
+          <strong>貼心提醒：</strong> 菜單內容與價格可能隨季節或市場調整，實際請以店內公告為主。想知道最新的臨時公休或隱藏版菜色，依照店內菜單為主!
+        </p>
+      </div>
+
+
+    </div>
+  </section>
 
   <!-- Features Section -->
   <section id="features" class="py-24 px-4 bg-white relative">
@@ -290,102 +389,6 @@
     </div>
   </section>
 
-  <!-- Menu Section -->
-  <section id="menu" class="py-24 px-4 bg-stone-100 border-t border-stone-200">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-        <div class="max-w-xl">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">美味菜單</h2>
-          <p class="text-gray-600 text-lg">
-            <span class="text-red-600 font-medium">熱炒合菜</span> 與 <span class="text-red-600 font-medium">個人定食</span>
-            隨心選擇。
-          </p>
-        </div>
-
-        <div class="flex bg-white p-1.5 rounded-full shadow-md mt-6 md:mt-0">
-          <button onclick="switchMenu('hot_dishes')" id="btn-hot_dishes"
-            class="px-8 py-3 rounded-full font-bold text-base transition-all duration-300 bg-red-600 text-white shadow-lg">
-            熱門熱炒
-          </button>
-          <button onclick="switchMenu('set_meals')" id="btn-set_meals"
-            class="px-8 py-3 rounded-full font-bold text-base transition-all duration-300 text-gray-500 hover:bg-gray-50">
-            個人套餐
-          </button>
-        </div>
-      </div>
-
-      <!-- Category Filter (only for hot dishes) -->
-      <div id="category-filter" class="mb-8 flex flex-wrap justify-center gap-3 animate-fadeIn">
-        <button onclick="filterByCategory('all')" id="cat-all"
-          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-red-600 text-white shadow-md hover:shadow-lg">
-          全部
-        </button>
-        <button onclick="filterByCategory('小菜')" id="cat-小菜"
-          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
-          小菜
-        </button>
-        <button onclick="filterByCategory('青菜')" id="cat-青菜"
-          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
-          青菜
-        </button>
-        <button onclick="filterByCategory('雞肉')" id="cat-雞肉"
-          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
-          雞肉
-        </button>
-        <button onclick="filterByCategory('豬肉')" id="cat-豬肉"
-          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
-          豬肉
-        </button>
-        <button onclick="filterByCategory('海鮮')" id="cat-海鮮"
-          class="px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 bg-white text-gray-700 border border-gray-200 hover:border-red-300 hover:text-red-600">
-          海鮮
-        </button>
-      </div>
-
-      <!-- Menu Grid -->
-      <div id="menu-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 animate-fadeIn">
-        <!-- Items will be injected by JS -->
-      </div>
-
-      <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mt-16 flex items-start shadow-sm">
-        <i data-lucide="info" class="text-yellow-600 w-6 h-6 mt-0.5 mr-4 flex-shrink-0"></i>
-        <p class="text-base text-yellow-800 leading-relaxed">
-          <strong>貼心提醒：</strong> 菜單內容與價格可能隨季節或市場調整，實際請以店內公告為主。想知道最新的臨時公休或隱藏版菜色，依照店內菜單為主!
-        </p>
-      </div>
-
-      <!-- Full Menu Image -->
-      <div class="mt-16">
-        <div class="text-center mb-8">
-          <h3 class="text-3xl font-bold text-gray-900 mb-3 flex items-center justify-center">
-            <i data-lucide="file-text" class="mr-3 h-8 w-8 text-red-600"></i>
-            完整菜單
-          </h3>
-          <p class="text-gray-600">點擊圖片可放大查看</p>
-        </div>
-        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
-          <a href="data/picture/menu.jpg" target="_blank" rel="noreferrer" class="block group">
-            <div class="relative overflow-hidden">
-              <img 
-                src="data/picture/menu.jpg" 
-                alt="口味創意料理完整菜單" 
-                class="w-full h-auto group-hover:scale-105 transition-transform duration-500"
-              />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
-                <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 px-6 py-3 rounded-full">
-                  <span class="text-gray-900 font-bold flex items-center">
-                    <i data-lucide="zoom-in" class="mr-2 h-5 w-5"></i>
-                    點擊放大
-                  </span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- About Section -->
   <section id="about" class="py-24 bg-red-950 text-white overflow-hidden relative">
     <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
@@ -438,9 +441,7 @@
           class="absolute -bottom-10 -left-10 w-48 h-48 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse animation-delay-2000">
         </div>
         <div class="relative p-2 bg-white/5 rounded-3xl backdrop-blur-sm border border-white/10">
-          <img
-            src="data/picture/Interior.png"
-            alt="口味創意料理內部環境" class="relative rounded-2xl shadow-2xl w-full" />
+          <img src="data/picture/Interior.png" alt="口味創意料理內部環境" class="relative rounded-2xl shadow-2xl w-full" />
         </div>
       </div>
     </div>
@@ -505,7 +506,8 @@
               <div>
                 <p class="text-lg">午餐：11:30 – 14:00</p>
                 <p class="text-lg">晚餐：17:00 – 21:00</p>
-                <p class="text-red-400 text-base mt-3 font-bold bg-red-500/10 inline-block px-3 py-1.5 rounded-lg">每周四公休</p>
+                <p class="text-red-400 text-base mt-3 font-bold bg-red-500/10 inline-block px-3 py-1.5 rounded-lg">每周四公休
+                </p>
                 <p class="text-yellow-500 text-sm mt-2 font-medium bg-yellow-500/10 inline-block px-2 py-1 rounded">*
                   臨時公休請見 FB/IG 公告</p>
               </div>
